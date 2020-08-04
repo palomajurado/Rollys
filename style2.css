@@ -1,0 +1,2119 @@
+/* Scroll Bar */
+
+::-webkit-scroll,
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  background-color: rgba(233, 223, 223, 0.151);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.7rem;
+  background: linear-gradient(rgba(204, 199, 199, 0.37), #ce5b3580);
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none inside;
+}
+
+ul.slider {
+  position: relative;
+}
+
+ul.slider li {
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: 50px;
+  padding: 50px;
+  border: 2px solid red;
+  background: #c82029;
+}
+
+ul.slider li:first-child {
+  opacity: 1;
+}
+
+ul.slider li:target {
+  opacity: 1;
+}
+
+nav {
+  position: relative;
+  top: 200px;
+  left: 50px;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+ul,
+li {
+  box-sizing: border-box;
+}
+
+ul.slider {
+  padding: 30px;
+}
+
+ul.slider li {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: gray;
+  opacity: 0;
+  transition: opacity 0.5s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: calc(1.5rem + 1vw);
+  text-align: center;
+}
+
+#slide1 {
+  /* background-color: #00324b; */
+  color: #fff;
+}
+
+#slide2 {
+  background-color: #c82029;
+  color: #00324b;
+}
+
+#slide3 {
+  background-image: url("./assets/fondoMenu.png");
+  color: #00324b;
+}
+
+#slide4 {
+  background-image: url("./assets/fondoMenu.png");
+  color: #65bce8;
+}
+
+#slide5 {
+  background-image: url("./assets/fondoMenu.png");
+  color: white;
+}
+
+nav {
+  width: 100vw;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fef6eb;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+nav a {
+  font-size: calc(0.5rem + 1vw);
+  text-decoration: none;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.8;
+  flex-grow: 1;
+  text-align: center;
+  background-color: #292a2d;
+  border-top: 5px solid #c82029;
+  border-right: 1px solid #c82029;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+nav li:last-child a {
+  border-right: 0;
+}
+
+nav a:hover {
+  background-color: #f0b68e;
+  color: rgba(184, 27, 33, 1);
+  border-top-color: #292a2d;
+}
+
+nav a:active {
+  border-top-color: #f90;
+  background: #f90;
+  color: #00324b;
+}
+
+.networks {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+.networks a img {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 3%;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.networks a {
+  padding: 5px;
+}
+
+.imgRedes:hover {
+  border-radius: 50%;
+  box-shadow: inset 0 0 1.25rem rgba(61, 247, 107, 0.863),
+    0 0 1.25rem rgb(68, 238, 82);
+}
+.logo {
+  margin-top: 10px;
+  height: 65px;
+  width: 72px;
+  object-fit: cover;
+  background: url(./assets/logo.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+#facebook:hover {
+  border-radius: 10%;
+  box-shadow: inset 0 0 1.25rem rgba(31, 69, 240, 0.863),
+    0 0 1.25rem rgb(40, 114, 252);
+}
+
+#instagram:hover {
+  border-radius: 30%;
+  box-shadow: inset 0 0 1.25rem rgba(243, 33, 226, 0.863),
+    0 0 1.25rem rgb(253, 25, 253);
+}
+.stars svg {
+  cursor: pointer;
+  color: grey;
+}
+.stars svg path:hover {
+  color: yellow;
+}
+/* Desktop */
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+  #slide1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .circlePostre img {
+    height: 70px;
+    width: 70px;
+  }
+  .sectionPadrePostre {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .sectionHijoPostre {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .papaForm {
+    position: relative;
+  }
+  .hijoForm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  .tituloForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .tituloForm span {
+    margin-bottom: 15px;
+  }
+
+  .formInputs {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tituloForm span {
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs label {
+    color: rgb(206, 0, 0);
+    letter-spacing: 1px;
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs button {
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    background: #c82029;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .formInputs button:hover {
+    background-color: #f0b68e;
+    border: 2px solid red;
+    color: black;
+  }
+  .dirMasTelf {
+    height: 32px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dirMasTelf svg {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: left;
+    color: yellow;
+  }
+  .parrafLocation {
+    text-shadow: 1.5px 2px 8px black;
+    width: 100%;
+    z-index: 300;
+    text-align: left;
+  }
+  .whatsLocation {
+    height: 20px;
+  }
+
+  .father {
+    display: flex;
+    flex-direction: column;
+  }
+  .son {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    width: 100vw;
+    height: 32vh;
+  }
+  .son img {
+    height: 135px;
+    margin-left: -40px;
+  }
+  .middle {
+    flex-direction: row-reverse;
+  }
+
+  .middle img {
+    height: 135px;
+    margin-right: -15px;
+    transform: rotate(-90deg);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: -42px;
+  }
+
+  .titleAndStars {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titleAndStars h2 {
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 2.5px 1px 2px white;
+    color: black;
+    left: 0;
+  }
+  .titlePlusComment p {
+    background-color: #292a2d;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0;
+    color: whitesmoke;
+    text-shadow: 2.5px 1px 2px black;
+  }
+  .titlePlusComment {
+    background-image: url("./assets/fondoMenu.png");
+    padding: 0 10px;
+  }
+
+  #slide1 {
+    background-image: url("./assets/fondoMenu.png");
+  }
+
+  #slide1 h1 {
+    font-family: "Yellowtail", cursive;
+    display: block;
+    text-shadow: 2.5px 1px 2px white;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .networks a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .logo {
+    height: 215px;
+    width: 272px;
+  }
+
+  .parraf {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 0%;
+    padding: 0 1.5rem;
+    text-shadow: 2px 1px 8px black;
+  }
+  .pFood {
+    margin: 0;
+  }
+  .titleH1 {
+    color: #c82029;
+    font-weight: bolder;
+  }
+  .menuFood {
+    height: 57.4%;
+    border: 1px solid black;
+    margin: 0 30px 100px;
+    font-size: 13px;
+    position: relative;
+    overflow: auto scroll;
+    background-color: #292a2d;
+  }
+  .menuFood span {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    border: 1px solid rgb(250, 208, 154);
+    padding: 2px;
+    margin: 2px 0;
+    font-size: 15px;
+    background: rgb(247, 223, 189);
+    color: black;
+  }
+}
+@media only screen and (min-width: 1370px) and (max-width: 1605px) {
+  .circlePostre img {
+    height: 70px;
+    width: 70px;
+  }
+  .sectionPadrePostre {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .sectionHijoPostre {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .papaForm {
+    position: relative;
+  }
+  .hijoForm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  .tituloForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .tituloForm span {
+    margin-bottom: 15px;
+  }
+
+  .formInputs {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tituloForm span {
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs label {
+    color: rgb(206, 0, 0);
+    letter-spacing: 1px;
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs button {
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    background: #c82029;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .formInputs button:hover {
+    background-color: #f0b68e;
+    border: 2px solid red;
+    color: black;
+  }
+  .dirMasTelf {
+    height: 32px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dirMasTelf svg {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: left;
+    color: yellow;
+  }
+  .parrafLocation {
+    text-shadow: 1.5px 2px 8px black;
+    width: 100%;
+    z-index: 300;
+    text-align: left;
+  }
+  .whatsLocation {
+    height: 20px;
+  }
+
+  .father {
+    display: flex;
+    flex-direction: column;
+  }
+  .son {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    width: 100vw;
+    height: 32vh;
+  }
+  .son img {
+    height: 135px;
+    margin-left: -40px;
+  }
+  .middle {
+    flex-direction: row-reverse;
+  }
+
+  .middle img {
+    height: 135px;
+    margin-right: -15px;
+    transform: rotate(-90deg);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: -42px;
+  }
+
+  .titleAndStars {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titleAndStars h2 {
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 2.5px 1px 2px white;
+    color: black;
+    left: 0;
+  }
+  .titlePlusComment p {
+    background-color: #292a2d;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0;
+    color: whitesmoke;
+    text-shadow: 2.5px 1px 2px black;
+  }
+  .titlePlusComment {
+    background-image: url("./assets/fondoMenu.png");
+    padding: 0 10px;
+  }
+
+  #slide1 {
+    background-image: url("./assets/fondoMenu.png");
+  }
+
+  #slide1 h1 {
+    font-family: "Yellowtail", cursive;
+    display: block;
+    text-shadow: 2.5px 1px 2px white;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .networks a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .logo {
+    margin-top: 10px;
+    height: 65px;
+    width: 72px;
+    object-fit: cover;
+    background: url("./assets/logo.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .parraf {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 0%;
+    padding: 0 1.5rem;
+    text-shadow: 2px 1px 8px black;
+  }
+  .pFood {
+    margin: 0;
+  }
+  .titleH1 {
+    color: #c82029;
+    font-weight: bolder;
+  }
+  .menuFood {
+    height: 57.4%;
+    border: 1px solid black;
+    margin: 0 30px 100px;
+    font-size: 13px;
+    position: relative;
+    overflow: auto scroll;
+    background-color: #292a2d;
+  }
+  .menuFood span {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    border: 1px solid rgb(250, 208, 154);
+    padding: 2px;
+    margin: 2px 0;
+    font-size: 15px;
+    background: rgb(247, 223, 189);
+    color: black;
+  }
+}
+/* Celulares con pantalla pequeña */
+@media (min-width: 320px) and (max-width: 480px) {
+  .circlePostre img {
+    height: 70px;
+    width: 70px;
+  }
+  .sectionPadrePostre {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .sectionHijoPostre {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .papaForm {
+    position: relative;
+  }
+  .hijoForm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  .tituloForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .tituloForm span {
+    margin-bottom: 15px;
+  }
+
+  .formInputs {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tituloForm span {
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs label {
+    color: rgb(206, 0, 0);
+    letter-spacing: 1px;
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs button {
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    background: #c82029;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .formInputs button:hover {
+    background-color: #f0b68e;
+    border: 2px solid red;
+    color: black;
+  }
+  .dirMasTelf {
+    height: 32px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dirMasTelf svg {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: left;
+    color: yellow;
+  }
+  .parrafLocation {
+    text-shadow: 1.5px 2px 8px black;
+    width: 100%;
+    z-index: 300;
+    text-align: left;
+  }
+  .whatsLocation {
+    height: 20px;
+  }
+
+  .father {
+    display: flex;
+    flex-direction: column;
+  }
+  .son {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    width: 100vw;
+    height: 32vh;
+  }
+  .son img {
+    height: 135px;
+    margin-left: -40px;
+  }
+  .middle {
+    flex-direction: row-reverse;
+  }
+
+  .middle img {
+    height: 135px;
+    margin-right: -15px;
+    transform: rotate(-90deg);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: -42px;
+  }
+
+  .titleAndStars {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titleAndStars h2 {
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 2.5px 1px 2px white;
+    color: black;
+    left: 0;
+  }
+  .titlePlusComment p {
+    background-color: #292a2d;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0;
+    color: whitesmoke;
+    text-shadow: 2.5px 1px 2px black;
+  }
+  .titlePlusComment {
+    background-image: url("./assets/fondoMenu.png");
+    padding: 0 10px;
+  }
+
+  #slide1 {
+    background-image: url("./assets/fondoMenu.png");
+  }
+
+  #slide1 h1 {
+    font-family: "Yellowtail", cursive;
+    display: block;
+    text-shadow: 2.5px 1px 2px white;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .networks a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .logo {
+    margin-top: 10px;
+    height: 65px;
+    width: 72px;
+    object-fit: cover;
+    background: url("./assets/logo.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .parraf {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 0%;
+    padding: 0 1.5rem;
+    text-shadow: 2px 1px 8px black;
+  }
+  .pFood {
+    margin: 0;
+  }
+  .titleH1 {
+    color: #c82029;
+    font-weight: bolder;
+  }
+  .menuFood {
+    height: 57.4%;
+    border: 1px solid black;
+    margin: 0 30px 100px;
+    font-size: 13px;
+    position: relative;
+    overflow: auto scroll;
+    background-color: #292a2d;
+  }
+  .menuFood span {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    border: 1px solid rgb(250, 208, 154);
+    padding: 2px;
+    margin: 2px 0;
+    font-size: 15px;
+    background: rgb(247, 223, 189);
+    color: black;
+  }
+}
+/* Ipads */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .circlePostre img {
+    height: 70px;
+    width: 70px;
+  }
+  .sectionPadrePostre {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .sectionHijoPostre {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .papaForm {
+    position: relative;
+  }
+  .hijoForm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  .tituloForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .tituloForm span {
+    margin-bottom: 15px;
+  }
+
+  .formInputs {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tituloForm span {
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs label {
+    color: rgb(206, 0, 0);
+    letter-spacing: 1px;
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs button {
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    background: #c82029;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .formInputs button:hover {
+    background-color: #f0b68e;
+    border: 2px solid red;
+    color: black;
+  }
+  .dirMasTelf {
+    height: 32px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dirMasTelf svg {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: left;
+    color: yellow;
+  }
+  .parrafLocation {
+    text-shadow: 1.5px 2px 8px black;
+    width: 100%;
+    z-index: 300;
+    text-align: left;
+  }
+  .whatsLocation {
+    height: 20px;
+  }
+
+  .father {
+    display: flex;
+    flex-direction: column;
+  }
+  .son {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    width: 100vw;
+    height: 32vh;
+  }
+  .son img {
+    height: 135px;
+    margin-left: -40px;
+  }
+  .middle {
+    flex-direction: row-reverse;
+  }
+
+  .middle img {
+    height: 135px;
+    margin-right: -15px;
+    transform: rotate(-90deg);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: -42px;
+  }
+
+  .titleAndStars {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titleAndStars h2 {
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 2.5px 1px 2px white;
+    color: black;
+    left: 0;
+  }
+  .titlePlusComment p {
+    background-color: #292a2d;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0;
+    color: whitesmoke;
+    text-shadow: 2.5px 1px 2px black;
+  }
+  .titlePlusComment {
+    background-image: url("./assets/fondoMenu.png");
+    padding: 0 10px;
+  }
+
+  #slide1 {
+    background-image: url("./assets/fondoMenu.png");
+  }
+
+  #slide1 h1 {
+    font-family: "Yellowtail", cursive;
+    display: block;
+    text-shadow: 2.5px 1px 2px white;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .networks a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .logo {
+    margin-top: 10px;
+    height: 65px;
+    width: 72px;
+    object-fit: cover;
+    background: url("./assets/logo.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .parraf {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 0%;
+    padding: 0 1.5rem;
+    text-shadow: 2px 1px 8px black;
+  }
+  .pFood {
+    margin: 0;
+  }
+  .titleH1 {
+    color: #c82029;
+    font-weight: bolder;
+  }
+  .menuFood {
+    height: 57.4%;
+    border: 1px solid black;
+    margin: 0 30px 100px;
+    font-size: 13px;
+    position: relative;
+    overflow: auto scroll;
+    background-color: #292a2d;
+  }
+  .menuFood span {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    border: 1px solid rgb(250, 208, 154);
+    padding: 2px;
+    margin: 2px 0;
+    font-size: 15px;
+    background: rgb(247, 223, 189);
+    color: black;
+  }
+}
+/*Ipads lanscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .circlePostre img {
+    height: 70px;
+    width: 70px;
+  }
+  .sectionPadrePostre {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .sectionHijoPostre {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .papaForm {
+    position: relative;
+  }
+  .hijoForm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  .tituloForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .tituloForm span {
+    margin-bottom: 15px;
+  }
+
+  .formInputs {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tituloForm span {
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs label {
+    color: rgb(206, 0, 0);
+    letter-spacing: 1px;
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs button {
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    background: #c82029;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .formInputs button:hover {
+    background-color: #f0b68e;
+    border: 2px solid red;
+    color: black;
+  }
+  .dirMasTelf {
+    height: 32px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dirMasTelf svg {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: left;
+    color: yellow;
+  }
+  .parrafLocation {
+    text-shadow: 1.5px 2px 8px black;
+    width: 100%;
+    z-index: 300;
+    text-align: left;
+  }
+  .whatsLocation {
+    height: 20px;
+  }
+
+  .father {
+    display: flex;
+    flex-direction: column;
+  }
+  .son {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    width: 100vw;
+    height: 32vh;
+  }
+  .son img {
+    height: 135px;
+    margin-left: -40px;
+  }
+  .middle {
+    flex-direction: row-reverse;
+  }
+
+  .middle img {
+    height: 135px;
+    margin-right: -15px;
+    transform: rotate(-90deg);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: -42px;
+  }
+
+  .titleAndStars {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titleAndStars h2 {
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 2.5px 1px 2px white;
+    color: black;
+    left: 0;
+  }
+  .titlePlusComment p {
+    background-color: #292a2d;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0;
+    color: whitesmoke;
+    text-shadow: 2.5px 1px 2px black;
+  }
+  .titlePlusComment {
+    background-image: url("./assets/fondoMenu.png");
+    padding: 0 10px;
+  }
+
+  #slide1 {
+    background-image: url("./assets/fondoMenu.png");
+  }
+
+  #slide1 h1 {
+    font-family: "Yellowtail", cursive;
+    display: block;
+    text-shadow: 2.5px 1px 2px white;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .networks a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .logo {
+    margin-top: 10px;
+    height: 65px;
+    width: 72px;
+    object-fit: cover;
+    background: url("./assets/logo.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .parraf {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 0%;
+    padding: 0 1.5rem;
+    text-shadow: 2px 1px 8px black;
+  }
+  .pFood {
+    margin: 0;
+  }
+  .titleH1 {
+    color: #c82029;
+    font-weight: bolder;
+  }
+  .menuFood {
+    height: 57.4%;
+    border: 1px solid black;
+    margin: 0 30px 100px;
+    font-size: 13px;
+    position: relative;
+    overflow: auto scroll;
+    background-color: #292a2d;
+  }
+  .menuFood span {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    border: 1px solid rgb(250, 208, 154);
+    padding: 2px;
+    margin: 2px 0;
+    font-size: 15px;
+    background: rgb(247, 223, 189);
+    color: black;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+  .circlePostre img {
+    height: 70px;
+    width: 70px;
+  }
+  .sectionPadrePostre {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .sectionHijoPostre {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .papaForm {
+    position: relative;
+  }
+  .hijoForm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  .tituloForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .tituloForm span {
+    margin-bottom: 15px;
+  }
+
+  .formInputs {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tituloForm span {
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs label {
+    color: rgb(206, 0, 0);
+    letter-spacing: 1px;
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs button {
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    background: #c82029;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .formInputs button:hover {
+    background-color: #f0b68e;
+    border: 2px solid red;
+    color: black;
+  }
+  .dirMasTelf {
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-size: 25px;
+  }
+  .dirMasTelf svg {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: left;
+    color: yellow;
+  }
+  .parrafLocation {
+    text-shadow: 1.5px 2px 8px black;
+    width: 100%;
+    z-index: 300;
+    text-align: left;
+  }
+  .whatsLocation {
+    height: 20px;
+  }
+
+  .father {
+    display: flex;
+    flex-direction: column;
+  }
+  .son {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    width: 100vw;
+    height: 32vh;
+  }
+  .son img {
+    height: 135px;
+    margin-left: -40px;
+  }
+  .middle {
+    flex-direction: row-reverse;
+  }
+
+  .middle img {
+    height: 135px;
+    margin-right: -15px;
+    transform: rotate(-90deg);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: -42px;
+  }
+
+  .titleAndStars {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titleAndStars h2 {
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 2.5px 1px 2px white;
+    color: black;
+    left: 0;
+  }
+  .titlePlusComment p {
+    background-color: #292a2d;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0;
+    color: whitesmoke;
+    text-shadow: 2.5px 1px 2px black;
+  }
+  .titlePlusComment {
+    background-image: url("./assets/fondoMenu.png");
+    padding: 0 10px;
+  }
+
+  #slide1 h1 {
+    font-size: 6.5rem;
+  }
+  .networks a img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .logo {
+    height: 215px;
+    width: 272px;
+  }
+
+  .parraf {
+    font-size: 2rem;
+  }
+  .pFood {
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+  .titleH1 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .menuFood {
+    min-height: 42%;
+    min-width: 40%;
+    margin: 0 30px 50px;
+  }
+  .menuFood span {
+    border: 5px solid rgb(241, 176, 90);
+    padding: 10px;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+  .circlePostre img {
+    height: 70px;
+    width: 70px;
+  }
+  .sectionPadrePostre {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .sectionHijoPostre {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .papaForm {
+    position: relative;
+  }
+  .hijoForm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  .tituloForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .tituloForm span {
+    margin-bottom: 15px;
+  }
+
+  .formInputs {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tituloForm span {
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs label {
+    color: rgb(206, 0, 0);
+    letter-spacing: 1px;
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs button {
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    background: #c82029;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .formInputs button:hover {
+    background-color: #f0b68e;
+    border: 2px solid red;
+    color: black;
+  }
+  .dirMasTelf {
+    height: 32px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dirMasTelf svg {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: left;
+    color: yellow;
+  }
+  .parrafLocation {
+    text-shadow: 1.5px 2px 8px black;
+    width: 100%;
+    z-index: 300;
+    text-align: left;
+  }
+  .whatsLocation {
+    height: 20px;
+  }
+
+  .father {
+    display: flex;
+    flex-direction: column;
+  }
+  .son {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    width: 100vw;
+    height: 32vh;
+  }
+  .son img {
+    height: 135px;
+    margin-left: -40px;
+  }
+  .middle {
+    flex-direction: row-reverse;
+  }
+
+  .middle img {
+    height: 135px;
+    margin-right: -15px;
+    transform: rotate(-90deg);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: -42px;
+  }
+
+  .titleAndStars {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titleAndStars h2 {
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 2.5px 1px 2px white;
+    color: black;
+    left: 0;
+  }
+  .titlePlusComment p {
+    background-color: #292a2d;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0;
+    color: whitesmoke;
+    text-shadow: 2.5px 1px 2px black;
+  }
+  .titlePlusComment {
+    background-image: url("./assets/fondoMenu.png");
+    padding: 0 10px;
+  }
+
+  #slide1 {
+    background-image: url("./assets/fondoMenu.png");
+  }
+
+  #slide1 h1 {
+    font-family: "Yellowtail", cursive;
+    display: block;
+    text-shadow: 2.5px 1px 2px white;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .networks a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .logo {
+    margin-top: 10px;
+    height: 65px;
+    width: 72px;
+    object-fit: cover;
+    background: url("./assets/logo.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .parraf {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 0%;
+    padding: 0 1.5rem;
+    text-shadow: 2px 1px 8px black;
+  }
+  .pFood {
+    margin: 0;
+  }
+  .titleH1 {
+    color: #c82029;
+    font-weight: bolder;
+  }
+  .menuFood {
+    height: 57.4%;
+    border: 1px solid black;
+    margin: 0 30px 100px;
+    font-size: 13px;
+    position: relative;
+    overflow: auto scroll;
+    background-color: #292a2d;
+  }
+  .menuFood span {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    border: 1px solid rgb(250, 208, 154);
+    padding: 2px;
+    margin: 2px 0;
+    font-size: 15px;
+    background: rgb(247, 223, 189);
+    color: black;
+  }
+}
+
+/*Landscape celulares*/
+@media only screen and (min-device-width: 480px) and (max-device-width: 640px) and (orientation: landscape) {
+  .circlePostre img {
+    height: 70px;
+    width: 70px;
+  }
+  .sectionPadrePostre {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .sectionHijoPostre {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .papaForm {
+    position: relative;
+  }
+  .hijoForm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  .tituloForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .tituloForm span {
+    margin-bottom: 15px;
+  }
+
+  .formInputs {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tituloForm span {
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs label {
+    color: rgb(206, 0, 0);
+    letter-spacing: 1px;
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs button {
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    background: #c82029;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .formInputs button:hover {
+    background-color: #f0b68e;
+    border: 2px solid red;
+    color: black;
+  }
+  .dirMasTelf {
+    height: 32px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dirMasTelf svg {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: left;
+    color: yellow;
+  }
+  .parrafLocation {
+    text-shadow: 1.5px 2px 8px black;
+    width: 100%;
+    z-index: 300;
+    text-align: left;
+  }
+  .whatsLocation {
+    height: 20px;
+  }
+
+  .father {
+    display: flex;
+    flex-direction: column;
+  }
+  .son {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    width: 100vw;
+    height: 32vh;
+  }
+  .son img {
+    height: 135px;
+    margin-left: -40px;
+  }
+  .middle {
+    flex-direction: row-reverse;
+  }
+
+  .middle img {
+    height: 135px;
+    margin-right: -15px;
+    transform: rotate(-90deg);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: -42px;
+  }
+
+  .titleAndStars {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titleAndStars h2 {
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 2.5px 1px 2px white;
+    color: black;
+    left: 0;
+  }
+  .titlePlusComment p {
+    background-color: #292a2d;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0;
+    color: whitesmoke;
+    text-shadow: 2.5px 1px 2px black;
+  }
+  .titlePlusComment {
+    background-image: url("./assets/fondoMenu.png");
+    padding: 0 10px;
+  }
+
+  #slide1 {
+    background-image: url("./assets/fondoMenu.png");
+  }
+
+  #slide1 h1 {
+    font-family: "Yellowtail", cursive;
+    display: block;
+    text-shadow: 2.5px 1px 2px white;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .networks a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .logo {
+    margin-top: 10px;
+    height: 65px;
+    width: 72px;
+    object-fit: cover;
+    background: url("./assets/logo.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .parraf {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 0%;
+    padding: 0 1.5rem;
+    text-shadow: 2px 1px 8px black;
+  }
+  .pFood {
+    margin: 0;
+  }
+  .titleH1 {
+    color: #c82029;
+    font-weight: bolder;
+  }
+  .menuFood {
+    height: 57.4%;
+    border: 1px solid black;
+    margin: 0 30px 100px;
+    font-size: 13px;
+    position: relative;
+    overflow: auto scroll;
+    background-color: #292a2d;
+  }
+  .menuFood span {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    border: 1px solid rgb(250, 208, 154);
+    padding: 2px;
+    margin: 2px 0;
+    font-size: 15px;
+    background: rgb(247, 223, 189);
+    color: black;
+  }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+  .circlePostre img {
+    height: 70px;
+    width: 70px;
+  }
+  .sectionPadrePostre {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .sectionHijoPostre {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .papaForm {
+    position: relative;
+  }
+  .hijoForm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  .tituloForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .tituloForm span {
+    margin-bottom: 15px;
+  }
+
+  .formInputs {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tituloForm span {
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs label {
+    color: rgb(206, 0, 0);
+    letter-spacing: 1px;
+    text-shadow: 1.5px 2px 8px black;
+  }
+  .formInputs button {
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    background: #c82029;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .formInputs button:hover {
+    background-color: #f0b68e;
+    border: 2px solid red;
+    color: black;
+  }
+  .dirMasTelf {
+    height: 32px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dirMasTelf svg {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: left;
+    color: yellow;
+  }
+  .parrafLocation {
+    text-shadow: 1.5px 2px 8px black;
+    width: 100%;
+    z-index: 300;
+    text-align: left;
+  }
+  .whatsLocation {
+    height: 20px;
+  }
+
+  .father {
+    display: flex;
+    flex-direction: column;
+  }
+  .son {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    width: 100vw;
+    height: 32vh;
+  }
+  .son img {
+    height: 135px;
+    margin-left: -40px;
+  }
+  .middle {
+    flex-direction: row-reverse;
+  }
+
+  .middle img {
+    height: 135px;
+    margin-right: -15px;
+    transform: rotate(-90deg);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    margin-top: -42px;
+  }
+
+  .titleAndStars {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titleAndStars h2 {
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 2.5px 1px 2px white;
+    color: black;
+    left: 0;
+  }
+  .titlePlusComment p {
+    background-color: #292a2d;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0;
+    color: whitesmoke;
+    text-shadow: 2.5px 1px 2px black;
+  }
+  .titlePlusComment {
+    background-image: url("./assets/fondoMenu.png");
+    padding: 0 10px;
+  }
+
+  #slide1 {
+    background-image: url("./assets/fondoMenu.png");
+  }
+
+  #slide1 h1 {
+    font-family: "Yellowtail", cursive;
+    display: block;
+    text-shadow: 2.5px 1px 2px white;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .networks a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .logo {
+    margin-top: 10px;
+    height: 65px;
+    width: 72px;
+    object-fit: cover;
+    background: url("./assets/logo.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .parraf {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 0%;
+    padding: 0 1.5rem;
+    text-shadow: 2px 1px 8px black;
+  }
+  .pFood {
+    margin: 0;
+  }
+  .titleH1 {
+    color: #c82029;
+    font-weight: bolder;
+  }
+  .menuFood {
+    height: 57.4%;
+    border: 1px solid black;
+    margin: 0 30px 100px;
+    font-size: 13px;
+    position: relative;
+    overflow: auto scroll;
+    background-color: #292a2d;
+  }
+  .menuFood span {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    border: 1px solid rgb(250, 208, 154);
+    padding: 2px;
+    margin: 2px 0;
+    font-size: 15px;
+    background: rgb(247, 223, 189);
+    color: black;
+  }
+}
